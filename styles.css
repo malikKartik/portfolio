@@ -4,6 +4,7 @@ html, body {
   padding: 0;
   margin: 0;
   position: relative;
+  overflow-x: hidden;
 }
 
 #side-nav {
@@ -13,6 +14,7 @@ html, body {
   background-color: #007bff;
   left: 0;
   top: 0;
+  z-index: 999;
 }
 
 .container {
@@ -75,11 +77,13 @@ html, body {
 }
 
 #about {
+  min-height: 100vh;
+  width: 100%;
   padding-top: 100px;
 }
 
 #about .container {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: relative;
   display: -ms-grid;
@@ -117,5 +121,308 @@ html, body {
 
 #about .container #about-content p {
   margin-top: 10px;
+}
+
+#skills {
+  min-height: 100vh;
+  width: 100%;
+}
+
+#skills .container {
+  position: relative;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+}
+
+#skills .container #skills-text {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  color: #007bff;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-weight: 800;
+}
+
+#skills .container #skills-text p {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  right: 0;
+}
+
+#skills .container #skills-container {
+  padding-left: 60px;
+  padding-right: 60px;
+  font-size: 16px;
+  line-height: 28px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+}
+
+#skills .container #skills-container .skills-layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#skills .container #skills-container button.skill {
+  background-color: transparent;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  font-family: "Raleway", sans-serif;
+  color: #007bff;
+  font-weight: 400;
+  height: 25px;
+  position: relative;
+}
+
+#skills .container #skills-container div.skill {
+  color: #007bff;
+  height: 25px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+#skills .container #skills-container div.skill button {
+  position: absolute;
+  font-family: "Raleway", sans-serif;
+  height: 25px;
+  left: 0;
+  background-color: transparent;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  color: #007bff;
+  font-weight: 400;
+  font-weight: 600;
+}
+
+#skills .container #skills-container div.skill .skill-fill {
+  z-index: 1;
+  background-color: #fff;
+  color: white;
+  font-weight: 600;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+#skills .container #skills-container div.skill .skill-fill:hover {
+  opacity: 1;
+}
+
+#skills .container #skills-container h5 {
+  margin-bottom: 5px;
+}
+
+#skills .container #skills-container button.skill:focus {
+  outline: none;
+}
+
+#experience {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: #f5f2ff;
+  padding-top: 50px;
+}
+
+#experience svg {
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+#experience .container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+}
+
+#experience .container #experience-text {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  color: #007bff;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-weight: 800;
+}
+
+#experience .container #experience-text p {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  right: 0;
+}
+
+#experience .container #experience-content {
+  padding-left: 60px;
+  padding-right: 120px;
+  font-size: 16px;
+  line-height: 28px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+}
+
+#experience .container #experience-content .experience {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#experience .container #experience-content .experience h5 {
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#experience .container #experience-content .experience p {
+  position: relative;
+  margin-top: 0px;
+  font-size: 14px;
+}
+
+#experience .container #experience-content .experience .time-period {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+}
+
+#projects {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding-top: 100px;
+}
+
+#projects svg {
+  position: absolute;
+  top: 0;
+}
+
+#projects .container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 70%;
+      grid-template-columns: 30% 70%;
+}
+
+#projects .container #projects-text {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  color: #007bff;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-weight: 800;
+}
+
+#projects .container #projects-text p {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  #side-nav {
+    display: none;
+  }
+  .container {
+    width: 80%;
+  }
+  #title-page #intro-line {
+    width: 95%;
+  }
+  #title-page #intro-line img {
+    height: 20px;
+  }
+  #title-page #intro-line #intro {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  #title-page #intro-line #intro-email {
+    font-size: 20px;
+  }
+  #about {
+    padding-top: 0;
+  }
+  #about .container {
+    display: inline;
+  }
+  #about .container #about-text {
+    height: 40px;
+  }
+  #about .container #about-text p {
+    left: 40px;
+  }
+  #about .container #about-content {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  #skills .container {
+    display: inline;
+  }
+  #skills .container #skills-text {
+    height: 40px;
+  }
+  #skills .container #skills-text p {
+    left: 40px;
+  }
+  #skills .container #skills-container {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  #experience {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    min-height: calc(100vh + 40px);
+  }
+  #experience .container {
+    display: inline;
+  }
+  #experience .container #experience-text {
+    height: 40px;
+  }
+  #experience .container #experience-text p {
+    left: 40px;
+  }
+  #experience .container #experience-content {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  #experience .container #experience-content .experience .time-period {
+    position: unset;
+    margin-bottom: 0;
+  }
+  #experience .container #experience-content .experience p {
+    margin-bottom: 0;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
