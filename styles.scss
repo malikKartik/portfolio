@@ -1,12 +1,17 @@
 $primary-color: #fff;
 $secondary-color: #007bff;
+// $secondary-color: #b797f7;
 $base-font: 'Raleway', sans-serif;
+$date-font: 'Rajdhani', sans-serif;
+$breakpoint-tablet: 768px;
+
 html,body{
     height: 100vh;
     width: 100%;
     padding: 0;
     margin: 0;
     position: relative;
+    overflow-x: hidden;
 }
 
 #side-nav{
@@ -16,6 +21,7 @@ html,body{
     background-color: $secondary-color;
     left: 0;
     top: 0;
+    z-index: 999;
 }
 
 .container{
@@ -68,9 +74,11 @@ html,body{
 }
 
 #about{
+    min-height: 100vh;
+    width: 100%;
     padding-top: 100px;
     .container{
-        height: 100vh;
+        height: 100%;
         width: 100%;
         position: relative;
         display: grid;
@@ -99,6 +107,274 @@ html,body{
             p{
                 margin-top: 10px;
             }
+        }
+    }
+}
+
+#skills{
+    min-height: 100vh;
+    width: 100%;
+    .container{
+        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        #skills-text{
+            font-family: $base-font;
+            font-size: 18px;
+            color: $secondary-color;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            font-weight: 800;
+            p{
+                width: fit-content;
+                position: absolute;
+                right: 0;
+            }
+        }
+        #skills-container{
+            padding-left: 60px;
+            padding-right: 60px;
+            font-size: 16px;
+            line-height: 28px;
+            font-family: $base-font;
+            font-weight: 200;
+            .skills-layout{
+                display: flex;
+                flex-direction: row;
+            }
+            button.skill{
+                background-color: transparent;
+                border: 1px solid $secondary-color;
+                border-radius: 4px;
+                font-family: $base-font;
+                color: $secondary-color;
+                font-weight: 400;
+                height: 25px;
+                position: relative;
+            }
+            div.skill{
+                color: $secondary-color;
+                height: 25px;
+                width: fit-content;
+                position: relative;
+                margin-bottom: 5px;
+                button{
+                    position: absolute;
+                    font-family: $base-font;
+                    height: 25px;
+                    left: 0;
+                    background-color: transparent;
+                    border: 1px solid $secondary-color;
+                    border-radius: 4px;
+                    color: $secondary-color;
+                    font-weight: 400;
+                    font-weight: 600;
+                }
+                .skill-fill{
+                    z-index: 1;
+                    background-color: $primary-color;
+                    color: white;
+                    font-weight: 600;
+                    opacity: 0;
+                    transition: all 0.4s ease-in-out;
+                }
+                .skill-fill:hover{
+                    opacity: 1;
+                }
+            }
+            h5{
+                margin-bottom: 5px;
+            }
+            button.skill:focus{
+                outline: none;
+            }
+        }
+    }
+}
+
+#experience{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: #f5f2ff;
+    padding-top: 50px;
+    svg{
+        position: absolute;
+        top: 0;
+        transform: translateY(-100%);
+    }
+    .container{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        #experience-text{
+            font-family: $base-font;
+            font-size: 18px;
+            color: $secondary-color;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            font-weight: 800;
+            p{
+                width: fit-content;
+                position: absolute;
+                right: 0;
+            }
+        }
+        #experience-content{
+            padding-left: 60px;
+            padding-right: 120px;
+            font-size: 16px;
+            line-height: 28px;
+            font-family: $base-font;
+            font-weight: 200;
+            .experience{
+                position: relative;
+                margin-bottom: 20px;
+                h5{
+                    position: relative;
+                    margin-top: 15px;
+                    margin-bottom: 0px;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+                p{
+                    position: relative;
+                    margin-top: 0px;
+                    font-size: 14px;
+                }
+                .time-period{
+                    position: absolute;
+                    right: 0;
+                    top: 10px;
+                    font-family: $date-font;
+                    font-weight: 200;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+#projects{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-top: 100px;
+    svg{
+        position: absolute;
+        top: 0;
+    }
+    .container{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        #projects-text{
+            font-family: $base-font;
+            font-size: 18px;
+            color: $secondary-color;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            font-weight: 800;
+            p{
+                width: fit-content;
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+}
+
+
+@media (max-width: $breakpoint-tablet) {
+    #side-nav{
+        display: none;
+    }
+    .container{
+        width: 80%;
+    }
+    #title-page{
+        #intro-line{
+            width: 95%;
+            img{
+                height: 20px;
+            }
+            #intro{
+                font-size: 20px;
+                line-height: 25px;
+            }
+            #intro-email{
+                font-size: 20px;
+            }
+        }
+    }
+    #about{
+        padding-top: 0;
+        .container{
+            display: inline;
+            #about-text{
+                height: 40px;
+                p{
+                    left: 40px;
+                }
+            }
+            #about-content{
+                padding-left: 45px;
+                padding-right: 45px;
+            }
+        }
+    }
+    #skills{
+        .container{
+            display: inline;
+            #skills-text{
+                height: 40px;
+                p{
+                    left: 40px;
+                }
+            }
+            #skills-container{
+                padding-left: 45px;
+                padding-right: 45px;
+            }
+        }
+    }
+    #experience{
+        padding-top: 10px;
+        padding-bottom: 30px;
+        min-height: calc(100vh + 40px);
+        .container{
+            display: inline;
+            #experience-text{
+                height: 40px;
+                p{
+                    left: 40px;
+                }
+            }
+            #experience-content{
+                padding-left: 45px;
+                padding-right: 45px;
+                .experience{
+                    .time-period{
+                        position: unset;
+                        margin-bottom: 0;
+                    }
+                    p{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    #projects{
+        svg{
         }
     }
 }
