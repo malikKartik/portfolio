@@ -309,12 +309,75 @@ html,body{
             width: 100%;
             position: relative;
             font-weight: 800;
+            padding-top: 5px;
             p{
                 width: fit-content;
                 position: absolute;
                 right: 0;
             }
         }
+        #projects-container{
+            padding-left: 60px;
+            padding-right: 60px;
+            font-size: 16px;
+            line-height: 28px;
+            font-family: $base-font;
+            font-weight: 200;
+            margin-bottom: 50px;
+            .project{
+                a{
+                    text-decoration: none;
+                    color: inherit;
+                }
+                h5{
+                    font-size: 16px;
+                    margin-bottom: 0;
+                    img{
+                        position: relative;
+                        top: 2px;
+                    }
+                }
+                p{
+                    font-size: 14px;
+                    margin-top: 0;
+                }
+                button{
+                    font-family: $base-font;
+                    height: 25px;
+                    left: 0;
+                    background-color: transparent;
+                    border: 1px solid $secondary-color;
+                    border-radius: 4px;
+                    color: $secondary-color;
+                    font-weight: 400;
+                    font-weight: 600;
+                }
+                button:focus{
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+#bottom-bar{
+    background-color: $primary-color;
+    height: 40px;
+    padding-top: 15px;
+    border-top: 1px solid $secondary-color;
+    button{
+        height: 30px;
+        background-color: transparent;
+        border: none;
+        border: 1px solid $secondary-color;
+        border-radius: 5px;
+        color: $secondary-color;
+        font-family: $base-font;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    button:focus{
+        outline: none;
     }
 }
 
@@ -400,7 +463,18 @@ html,body{
         }
     }
     #projects{
-        svg{
+        .container{
+            display: inline;
+            #projects-text{
+                height: 40px;
+                p{
+                    left: 40px;
+                }
+            }
+            #projects-container{
+                padding-left: 45px;
+                padding-right: 45px;
+            }
         }
     }
 }

@@ -373,6 +373,7 @@ html, body {
   width: 100%;
   position: relative;
   font-weight: 800;
+  padding-top: 5px;
 }
 
 #projects .container #projects-text p {
@@ -381,6 +382,75 @@ html, body {
   width: fit-content;
   position: absolute;
   right: 0;
+}
+
+#projects .container #projects-container {
+  padding-left: 60px;
+  padding-right: 60px;
+  font-size: 16px;
+  line-height: 28px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  margin-bottom: 50px;
+}
+
+#projects .container #projects-container .project a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#projects .container #projects-container .project h5 {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+#projects .container #projects-container .project h5 img {
+  position: relative;
+  top: 2px;
+}
+
+#projects .container #projects-container .project p {
+  font-size: 14px;
+  margin-top: 0;
+}
+
+#projects .container #projects-container .project button {
+  font-family: "Raleway", sans-serif;
+  height: 25px;
+  left: 0;
+  background-color: transparent;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  color: #007bff;
+  font-weight: 400;
+  font-weight: 600;
+}
+
+#projects .container #projects-container .project button:focus {
+  outline: none;
+}
+
+#bottom-bar {
+  background-color: #fff;
+  height: 40px;
+  padding-top: 15px;
+  border-top: 1px solid #007bff;
+}
+
+#bottom-bar button {
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  color: #007bff;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#bottom-bar button:focus {
+  outline: none;
 }
 
 @media (max-width: 768px) {
@@ -456,6 +526,19 @@ html, body {
   }
   #experience .container #experience-content .experience p {
     margin-bottom: 0;
+  }
+  #projects .container {
+    display: inline;
+  }
+  #projects .container #projects-text {
+    height: 40px;
+  }
+  #projects .container #projects-text p {
+    left: 40px;
+  }
+  #projects .container #projects-container {
+    padding-left: 45px;
+    padding-right: 45px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
