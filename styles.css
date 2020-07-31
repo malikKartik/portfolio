@@ -527,5 +527,18 @@ html, body {
   #experience .container #experience-content .experience p {
     margin-bottom: 0;
   }
+  #projects .container {
+    display: inline;
+  }
+  #projects .container #projects-text {
+    height: 40px;
+  }
+  #projects .container #projects-text p {
+    left: 40px;
+  }
+  #projects .container #projects-container {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
