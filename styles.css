@@ -17,6 +17,39 @@ html, body {
   z-index: 999;
 }
 
+#side-nav .nav-el {
+  width: 100%;
+  height: 60px;
+  background-color: #007bff;
+  position: relative;
+}
+
+#side-nav .nav-el svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  fill: #fff;
+  height: 30px;
+}
+
+#side-nav .nav-el svg path {
+  fill: #fff;
+}
+
+#side-nav .home {
+  background-color: #fff;
+}
+
+#side-nav .home svg {
+  fill: #007bff;
+}
+
+#side-nav .home svg path {
+  fill: #007bff;
+}
+
 .container {
   width: 80%;
   margin: 0 auto;
